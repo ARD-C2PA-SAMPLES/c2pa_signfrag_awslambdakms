@@ -1,0 +1,41 @@
+{
+    "alg": "es256",
+    "sign_cert": "es256_certs.pem",
+    "ta_url": "http://timestamp.digicert.com",
+    "claim_generator_info": [
+        {
+            "name": "Demo-Signer",
+            "version": "1.0"
+        }
+    ],
+    "assertions": [
+        {
+            "label": "c2pa.actions",
+            "data": {
+                "actions": [
+                    {
+                        "action": "c2pa.opened"
+                    },
+                    {
+                        "action": "c2pa.placed"
+                    }
+                ]
+            }
+        },
+        {
+            "label": "de.wdr.custom",
+            "data": {
+                "organization": "Westdeutscher Rundfunk ",
+                "platform": "My Platform",
+                "news": [
+                    {
+                        "info": " Comment, claims...",
+                        "person": "Journalist",
+                        "time": "Time",
+                        "location": "Location"
+                    }
+                ]
+            }
+        }
+    ]
+}
